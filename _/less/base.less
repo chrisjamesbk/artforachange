@@ -17,14 +17,16 @@
 // --------------------------------------------------
 
 html {
+    height: 100%;
     margin: 0;
+    
 }
 
 body {
     margin: 0;
     font: 100%/1.5 serif; /* 16px */
     font-family: georgia, times, serif;
-    background: #fff;
+    background: url('../img/bg.jpg') repeat 0 0 #fff;
 }
 
 // HEADINGS
@@ -42,7 +44,9 @@ body {
 // font-family: "futura-pt",sans-serif;
 // 300 Light, 400 Book, 500 Medium, 700 Bold
 
-h1 { margin: 0; }
+h1 { 
+    .invisible();
+}
 
 
 // LISTS

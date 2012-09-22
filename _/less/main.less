@@ -1,0 +1,25 @@
+.main {
+    width: 480px;
+    @media screen and (max-width: 1299px) {
+        width: 600px;
+    }
+}
+
+.main-para {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.main-date {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-times {
+    > span {
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+}

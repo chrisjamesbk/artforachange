@@ -143,12 +143,19 @@ h1 {
 
   clip: rect(1px, 1px, 1px, 1px);
 }
+h2 {
+  width: 100%;
+  font-weight: normal;
+}
+.is-invisible {
+  visibility: hidden;
+}
 .wrapper {
   height: 972px;
   padding-left: 792px;
   background: url('../img/poster.jpg') no-repeat 0 0 transparent;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1299px) {
   .wrapper {
     width: 792px;
     padding: 0;
@@ -157,6 +164,11 @@ h1 {
 .layout-section {
   padding-top: 8em;
 }
+@media screen and (max-width: 1299px) {
+  .layout-section {
+    padding: 46em 0 12em 104px;
+  }
+}
 nav ul {
   margin: 0;
   padding: 0;
@@ -164,8 +176,12 @@ nav ul {
   display: block;
   padding: 8em 0 0;
 }
+nav ul > li {
+  opacity: 0;
+}
 nav ul > li:first-child {
   margin-bottom: 1em;
+  opacity: 1;
 }
 nav ul > li > a {
   display: inline-block;
@@ -186,10 +202,30 @@ nav ul > li > a {
 nav ul > li > a:hover {
   color: #0088cc;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1299px) {
   nav ul > li {
     text-align: right;
   }
+}
+.main {
+  width: 480px;
+}
+@media screen and (max-width: 1299px) {
+  .main {
+    width: 600px;
+  }
+}
+.main-para {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main-date {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main-times > span:first-child {
+  font-weight: bold;
 }
 @media print {
   * {

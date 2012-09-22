@@ -12,13 +12,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="shortcut icon" href="_/img/favicon.ico">
+    <link rel="shortcut icon" href="./_/img/favicon.ico">
 
-    <link rel="stylesheet" href="_/css/style.css">
+    <link rel="stylesheet" href="./_/css/style.css">
 
-    <script src="_/js/libs/modernizr-2.5.3.min.js"></script>
-    <script type="text/javascript" src="//use.typekit.net/ytn8sqk.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="./_/js/libs/modernizr-2.5.3.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var config = {
+          kitId: 'ytn8sqk',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -31,26 +38,38 @@
             </ul>
         </nav>
         <section class="layout-section">
-            <header style="width:500px;">
+            <header>
                 <h1>Art For A Change</h1>
             </header>
-            <section>
-                <p>a silent art auction in support of the obama campaign</p>
+            <section class="main is-invisible">
+                <div class="main-para">a silent art auction in support of the obama campaign</div>
+                <div class="main-date">sunday october 7th 2012</div>
+                <div class="main-times">
+                    <span>6-9pm</span>
+                    <span>(auction ends at 8pm)</span>
+                </div>
+                <div class="main-para">all proceeds go directly to the Obama campaign</div>
+                <div class="main-venue">Reverse Art Space</div>
+                <div class="main-address">28 Frost Street, Williamsburg, Brooklyn</div>
             </section>
         </section>
-    
-        <footer>
-            <p>Footer content</p>
-        </footer>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="_/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="./_/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 
-    <script src="_/js/jquery.fittext.js"></script>
-    <script src="_/js/script.js"></script>
+    <script src="./_/js/jquery.bigtext.js"></script>
+    <script src="./_/js/script.js"></script>
     <script>
-        $('h1').fitText();
+        WebFont.load({
+            typekit: {
+                id: 'ytn8sqk'
+            },
+            active: function() {
+                $('.main').bigtext().removeClass('is-invisible');
+            }
+        });
     </script>
     <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
